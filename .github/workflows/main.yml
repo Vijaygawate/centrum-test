@@ -20,4 +20,4 @@ jobs:
 
       - name: SSH into EC2 and deploy
         run: |
-          ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa ${{ secrets.SSH_USERNAME }}@${{ secrets.SERVER_IP }} 'cd /home/ubuntu/centrum-test && git pull origin main && sudo python app.py'
+          ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa ${{ secrets.SSH_USERNAME }}@${{ secrets.SERVER_IP }} 'cd /home/ubuntu/centrum-test && git pull origin main && sudo python3 app.py'
